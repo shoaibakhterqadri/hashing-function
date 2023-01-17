@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3456613934683097"
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing Function</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+    
+
+
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+
+         <nav id="sidebar">
+            <div id="all" style="position:relative">
+            <div class="sidebar-header" style="width: 250px;">
+              <a href="../index.html"><h3>Codings Hub</h3></a> 
+            </div>
+
+            <ul class="list-unstyled components">
+                <h4>JavaScript Projects</h4>
+                <li ><a href="../index.html">Intro to Projects</a></li>
+                <!-- <li class="active">
+                    <a href="index.html">Hashing Function</a>
+                </li> -->
+                <li class="active" style="width: 250px;" >
+                        
+                    <a href="#c++" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Hashing Function</a>
+                    
+                    <ul class="collapse list-unstyled" id="c++">
+                            <li>
+                                <a href="#sha1">1. SHA 1</a>
+                            </li>
+                            <li>
+                                <a href="sha256/index.html">2. SHA 256</a>
+                            </li>
+                            <li>
+                                <a href="sha384/index.html">3. SHA 384</a>
+                            </li>
+                            <li>
+                                <a href="sha512/index.html">4. SHA 512</a>
+                            </li>
+                            </li>
+                            </li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="../encryption/index.html">Encryption/Decryption</a>
+                </li>
+                <li>
+                    <a href="../encryption/fileEncrypt/index.html">Encrypt/Decrypt File Data</a>
+                </li>
+                <li>
+                    <a href="../passwordManagement/userAuthentication/index.html">Password Management</a>
+                </li>
+                <li>
+                    <a href="../passwordManagement/generatePassword/index.html">Random Password Generator</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://portfolio-shoaibakhter.netlify.app/">Portfolio</a>
+                </li>
+                <li>
+                    <a target="_blank" href="../../contact-us/contact/index.html">Contact</a>
+                </li>
+            </ul>
+        
+        
+            </div>
+        </nav> 
+
+
+
+
+
+
+        
+
+
+
+
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../quiz/Quiz Project/Login box/index.html">Quiz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../mcqs/html.html">MCQs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.fiverr.com/users/shoaibakhter18">Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+            </nav>
+
+            <h1 id="sha1">SHA-1 Online Hashing Function</h1> <br>
+
+           <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 first">
+                <form action="">
+                    <h2>SHA-1 Text Hashing Function</h2>
+                    <p>Enter text or password for SHA-1 Hashing Function</p>
+                   
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Write Text or Password for Hashing Function" id="hashingText" style="height: 200px"></textarea>
+                      </div>
+                      <button type="button" id="hashBtn" class="btn btn-primary" >SHA-1 Hash</button>
+                      <h5 class="resultHeading">SHA-1 Hashing Result:</h5>
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Hashing Result will show here"  id="hashingResult" style="height: 200px"></textarea>
+                      </div>
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 vertical-line second" >
+                <form action="">
+                    <h2>SHA-1 File Hashing Function</h2>
+                    <p>Upload File for SHA-1 Hashing Function </p>
+                    <div class="input form-floating mb-5 ">
+                        <div id="droppable-zone">
+                          <div id="droppable-zone-wrapper">
+                            <div id="droppable-zone-text"></div>
+                          </div>
+                          <input class="droppable-file" id="input" onchange="getFileName(this)" multiple type="file"  placeholder="Input2">
+                        </div>
+                      </div>
+                      
+                      <h5 class="resultHeading " style="margin-top: 70px;">Hashing File Result:</h5>
+                      <div class="form-floating mb-3">
+                        
+                        <textarea class="form-control" placeholder="Hashing Result will show here"  id="FileResult" style="height: 200px"></textarea>
+                      </div>
+                      <output style="display:block;font-family:monospace;"></output>
+                </form>
+            </div>
+           </div>
+
+
+
+            
+
+            <div class="line"></div>
+
+
+
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#sidebarCollapse").on('click', function () {
+                $("#sidebar").toggleClass('active');
+            });
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
