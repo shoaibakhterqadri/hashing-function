@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 
@@ -35,7 +35,7 @@
 
             <ul class="list-unstyled components">
                 <h4>JavaScript Projects</h4>
-                <li ><a href="../index.html">Intro to Projects</a></li>
+                <li ><a href="../../index.html">Intro to Projects</a></li>
                 <!-- <li class="active">
                     <a href="index.html">Hashing Function</a>
                 </li> -->
@@ -45,16 +45,16 @@
                     
                     <ul class="collapse list-unstyled" id="c++">
                             <li>
-                                <a href="#sha1">1. SHA 1</a>
+                                <a href="../index.html">1. SHA 1</a>
                             </li>
                             <li>
-                                <a href="sha256/index.html">2. SHA 256</a>
+                                <a href="../sha256/index.html">3. SHA 256</a>
                             </li>
                             <li>
-                                <a href="sha384/index.html">3. SHA 384</a>
+                                <a href="../sha384/index.html">4. SHA 384</a>
                             </li>
                             <li>
-                                <a href="sha512/index.html">4. SHA 512</a>
+                                <a href="index.html">5. SHA 512</a>
                             </li>
                             </li>
                             </li>
@@ -64,19 +64,19 @@
                     <a href="../encryption/index.html">Encryption/Decryption</a>
                 </li>
                 <li>
-                    <a href="../encryption/fileEncrypt/index.html">Encrypt/Decrypt File Data</a>
+                    <a href="../../encryption/fileEncrypt/index.html">Encrypt/Decrypt File Data</a>
                 </li>
                 <li>
-                    <a href="../passwordManagement/userAuthentication/index.html">Password Management</a>
+                    <a href="../../passwordManagement/userAuthentication/index.html">Password Management</a>
                 </li>
                 <li>
-                    <a href="../passwordManagement/generatePassword/index.html">Random Password Generator</a>
+                    <a href="../../passwordManagement/generatePassword/index.html">Random Password Generator</a>
                 </li>
                 <li>
                     <a target="_blank" href="https://portfolio-shoaibakhter.netlify.app/">Portfolio</a>
                 </li>
                 <li>
-                    <a target="_blank" href="../../contact-us/contact/index.html">Contact</a>
+                    <a target="_blank" href="../../../contact-us/contact/index.html">Contact</a>
                 </li>
             </ul>
         
@@ -99,7 +99,7 @@
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" >
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
@@ -129,21 +129,21 @@
                         </ul>
                     </div>
                     </div>
-            </nav>
+            </nav> -->
 
-            <h1 id="sha1">SHA-1 Online Hashing Function</h1> <br>
+            <h1 id="sha1">SHA-512 Online Hashing Function</h1> <br>
 
            <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12 first">
                 <form action="">
-                    <h2>SHA-1 Text Hashing Function</h2>
-                    <p>Enter text or password for SHA-1 Hashing Function</p>
+                    <h2>SHA-512 Text Hashing Function</h2>
+                    <p>Enter text or password for SHA-512 Hashing Function</p>
                    
                     <div class="form-floating mb-3">
                         <textarea class="form-control" placeholder="Write Text or Password for Hashing Function" id="hashingText" style="height: 200px"></textarea>
                       </div>
-                      <button type="button" id="hashBtn" class="btn btn-primary" >SHA-1 Hash</button>
-                      <h5 class="resultHeading">SHA-1 Hashing Result:</h5>
+                      <button type="button" id="hashBtn" class="btn btn-primary" >SHA-512 Hash</button>
+                      <h5 class="resultHeading">SHA-512 Hashing Result:</h5>
                       <div class="form-floating mb-3">
                         <textarea class="form-control" placeholder="Hashing Result will show here"  id="hashingResult" style="height: 200px"></textarea>
                       </div>
@@ -151,9 +151,10 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 vertical-line second" >
                 <form action="">
-                    <h2>SHA-1 File Hashing Function</h2>
-                    <p>Upload File for SHA-1 Hashing Function </p>
-                    <div class="input form-floating mb-5 ">
+                    <h2>SHA-512 File Hashing Function</h2>
+                    <p>Upload File for SHA-512 Hashing Function </p>
+                   
+                    <div class="input form-floating mb-5">
                         <div id="droppable-zone">
                           <div id="droppable-zone-wrapper">
                             <div id="droppable-zone-text"></div>
@@ -161,10 +162,8 @@
                           <input class="droppable-file" id="input" onchange="getFileName(this)" multiple type="file"  placeholder="Input2">
                         </div>
                       </div>
-                      
-                      <h5 class="resultHeading " style="margin-top: 70px;">Hashing File Result:</h5>
+                      <h5 class="resultHeading" style="margin-top: 70px;">Hashing Result Result:</h5>
                       <div class="form-floating mb-3">
-                        
                         <textarea class="form-control" placeholder="Hashing Result will show here"  id="FileResult" style="height: 200px"></textarea>
                       </div>
                       <output style="display:block;font-family:monospace;"></output>

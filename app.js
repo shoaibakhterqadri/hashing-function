@@ -3,9 +3,9 @@ let hashingResult=document.getElementById("hashingResult");
 
 let hashBtn=document.getElementById("hashBtn");
 
-async function hash(string) {
+    async function hash(string) {
       const utf8 = new TextEncoder().encode(string);
-      const hashBuffer = await crypto.subtle.digest('SHA-1', utf8);
+      const hashBuffer = await crypto.subtle.digest('SHA-512', utf8);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray
         .map((bytes) => bytes.toString(16).padStart(2, '0'))
@@ -14,9 +14,6 @@ async function hash(string) {
     }
     hashBtn.addEventListener("click",()=>
     hash(hashingText.value).then((hex) => hashingResult.value=hex))
-
-
-console.log(hashingText.value)
 
 
 
@@ -34,9 +31,10 @@ file.addEventListener('change', hashTheseFiles);
 // simplify the code.
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
+
   // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
   // The resulting hash is stored in an array buffer
-  const hashAsArrayBuffer = await crypto.subtle.digest('SHA-1', arrayBuffer);
+  const hashAsArrayBuffer = await crypto.subtle.digest('SHA-512', arrayBuffer);
 
   // To display it as a string we will get the hexadecimal value of each byte of the array buffer
   // This gets us an array where each byte of the array buffer becomes one item in the array
@@ -63,6 +61,7 @@ fileName.innerHTML="Drop File Here"
 function getFileName(input) {
   fileName.innerHTML=input.files[0].name
 }
+
 
 
  
